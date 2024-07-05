@@ -62,6 +62,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [terms-and-conditions]()
 - [faq]()
 - [django-calendly](backend/modules)
+- [django-core](backend/modules)
 
 # Getting started: Frontend
 
