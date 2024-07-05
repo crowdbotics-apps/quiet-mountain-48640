@@ -35,6 +35,30 @@ function modules_privacy_policy_partial_update(payload) {
 function modules_privacy_policy_destroy(payload) {
   return quietmountainAPI.delete(`/modules/privacy-policy/${payload.id}/`)
 }
+function modules_terms_and_conditions_list(payload) {
+  return quietmountainAPI.get(`/modules/terms-and-conditions/`)
+}
+function modules_terms_and_conditions_create(payload) {
+  return quietmountainAPI.post(`/modules/terms-and-conditions/`, payload)
+}
+function modules_terms_and_conditions_retrieve(payload) {
+  return quietmountainAPI.get(`/modules/terms-and-conditions/${payload.id}/`)
+}
+function modules_terms_and_conditions_update(payload) {
+  return quietmountainAPI.put(
+    `/modules/terms-and-conditions/${payload.id}/`,
+    payload
+  )
+}
+function modules_terms_and_conditions_partial_update(payload) {
+  return quietmountainAPI.patch(
+    `/modules/terms-and-conditions/${payload.id}/`,
+    payload
+  )
+}
+function modules_terms_and_conditions_destroy(payload) {
+  return quietmountainAPI.delete(`/modules/terms-and-conditions/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return quietmountainAPI.post(`/rest-auth/login/`, payload)
 }
@@ -78,6 +102,12 @@ export const apiService = {
   modules_privacy_policy_update,
   modules_privacy_policy_partial_update,
   modules_privacy_policy_destroy,
+  modules_terms_and_conditions_list,
+  modules_terms_and_conditions_create,
+  modules_terms_and_conditions_retrieve,
+  modules_terms_and_conditions_update,
+  modules_terms_and_conditions_partial_update,
+  modules_terms_and_conditions_destroy,
   rest_auth_login_create,
   rest_auth_logout_create,
   rest_auth_password_change_create,
